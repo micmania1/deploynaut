@@ -1,12 +1,18 @@
 <div class="content page-header">
+
 	<% include PageHeader %>
 
 	<% if $CurrentProject %>
 	<ul class="nav nav-tabs">
-		<% if $Project.canBackup %>
+		<li>
+			<a href="<% with $Navigation %><% loop $Project.Menu %>
+					<% if $IsActive %>$Link<% end_if %><% end_loop %><% end_with %>">Overview</a>
+		</li>
+		
+		<% if $CurrentProject.canBackup %>
 		<li><a href="$CurrentProject.Link('createsnapshot')">Create Snapshot</a></li>
 		<% end_if %>
-		<% if $Project.canUploadArchive %>
+		<% if $CurrentProject.canUploadArchive %>
 		<li><a href="$CurrentProject.Link('uploadsnapshot')">Upload Snapshot</a></li>
 		<% end_if %>
 		<li class="active"><a href="$CurrentProject.Link('snapshotslog')">Log</a></li>
