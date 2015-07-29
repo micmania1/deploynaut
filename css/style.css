@@ -2322,7 +2322,7 @@ output {
   line-height: 1.42857;
   color: #555555; }
 
-.form-control, #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LostPasswordForm input.text {
+.form-control, input.text, #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LostPasswordForm input.text {
   display: block;
   width: 100%;
   height: 34px;
@@ -2339,31 +2339,34 @@ output {
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
-  .form-control:focus, #MemberLoginForm_LoginForm input.text:focus, #MemberLoginForm_LostPasswordForm input.text:focus {
+  .form-control:focus, input.text:focus, #MemberLoginForm_LoginForm input.text:focus, #MemberLoginForm_LostPasswordForm input.text:focus {
     border-color: #646464;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(100, 100, 100, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(100, 100, 100, 0.6); }
-  .form-control::-moz-placeholder, #MemberLoginForm_LoginForm input.text::-moz-placeholder, #MemberLoginForm_LostPasswordForm input.text::-moz-placeholder {
+  .form-control::-moz-placeholder, input.text::-moz-placeholder, #MemberLoginForm_LoginForm input.text::-moz-placeholder, #MemberLoginForm_LostPasswordForm input.text::-moz-placeholder {
     color: #999;
     opacity: 1; }
-  .form-control:-ms-input-placeholder, #MemberLoginForm_LoginForm input.text:-ms-input-placeholder, #MemberLoginForm_LostPasswordForm input.text:-ms-input-placeholder {
+  .form-control:-ms-input-placeholder, input.text:-ms-input-placeholder, #MemberLoginForm_LoginForm input.text:-ms-input-placeholder, #MemberLoginForm_LostPasswordForm input.text:-ms-input-placeholder {
     color: #999; }
-  .form-control::-webkit-input-placeholder, #MemberLoginForm_LoginForm input.text::-webkit-input-placeholder, #MemberLoginForm_LostPasswordForm input.text::-webkit-input-placeholder {
+  .form-control::-webkit-input-placeholder, input.text::-webkit-input-placeholder, #MemberLoginForm_LoginForm input.text::-webkit-input-placeholder, #MemberLoginForm_LostPasswordForm input.text::-webkit-input-placeholder {
     color: #999; }
   .form-control[disabled],
+  input[disabled].text,
   #MemberLoginForm_LoginForm input[disabled].text,
   #MemberLoginForm_LostPasswordForm input[disabled].text,
   .form-control[readonly],
+  input[readonly].text,
   #MemberLoginForm_LoginForm input[readonly].text,
   #MemberLoginForm_LostPasswordForm input[readonly].text,
-  fieldset[disabled] .form-control, fieldset[disabled] #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm fieldset[disabled] input.text, fieldset[disabled] #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm fieldset[disabled] input.text {
+  fieldset[disabled] .form-control, fieldset[disabled] input.text, fieldset[disabled] #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm fieldset[disabled] input.text, fieldset[disabled] #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm fieldset[disabled] input.text {
     background-color: #eeeeee;
     opacity: 1; }
   .form-control[disabled],
+  input[disabled].text,
   #MemberLoginForm_LoginForm input[disabled].text,
   #MemberLoginForm_LostPasswordForm input[disabled].text,
-  fieldset[disabled] .form-control, fieldset[disabled] #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm fieldset[disabled] input.text, fieldset[disabled] #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm fieldset[disabled] input.text {
+  fieldset[disabled] .form-control, fieldset[disabled] input.text, fieldset[disabled] #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm fieldset[disabled] input.text, fieldset[disabled] #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm fieldset[disabled] input.text {
     cursor: not-allowed; }
 
 textarea.form-control {
@@ -2374,18 +2377,22 @@ input[type="search"] {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="date"].form-control,
+  input[type="date"].text,
   #MemberLoginForm_LoginForm input[type="date"].text,
   #MemberLoginForm_LostPasswordForm input[type="date"].text,
   input[type="time"].form-control,
+  input[type="time"].text,
   #MemberLoginForm_LoginForm input[type="time"].text,
   #MemberLoginForm_LostPasswordForm input[type="time"].text,
   input[type="datetime-local"].form-control,
+  input[type="datetime-local"].text,
   #MemberLoginForm_LoginForm input[type="datetime-local"].text,
   #MemberLoginForm_LostPasswordForm input[type="datetime-local"].text,
-  input[type="month"].form-control, #MemberLoginForm_LoginForm input[type="month"].text, #MemberLoginForm_LostPasswordForm input[type="month"].text {
+  input[type="month"].form-control, input[type="month"].text, #MemberLoginForm_LoginForm input[type="month"].text, #MemberLoginForm_LostPasswordForm input[type="month"].text {
     line-height: 34px; }
   input[type="date"].input-sm,
   .input-group-sm > input[type="date"].form-control,
+  .input-group-sm > input[type="date"].text,
   #MemberLoginForm_LoginForm .input-group-sm > input[type="date"].text, #MemberLoginForm_LostPasswordForm .input-group-sm > input[type="date"].text, .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
   .input-group-sm > .input-group-btn > input[type="date"].action,
@@ -2393,6 +2400,7 @@ input[type="search"] {
   .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
+  .input-group-sm > input[type="time"].text,
   #MemberLoginForm_LoginForm .input-group-sm > input[type="time"].text, #MemberLoginForm_LostPasswordForm .input-group-sm > input[type="time"].text, .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm > .input-group-btn > input[type="time"].action,
@@ -2400,6 +2408,7 @@ input[type="search"] {
   .input-group-sm input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm > input[type="datetime-local"].form-control,
+  .input-group-sm > input[type="datetime-local"].text,
   #MemberLoginForm_LoginForm .input-group-sm > input[type="datetime-local"].text, #MemberLoginForm_LostPasswordForm .input-group-sm > input[type="datetime-local"].text, .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].action,
@@ -2407,6 +2416,7 @@ input[type="search"] {
   .input-group-sm input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm > input[type="month"].form-control,
+  .input-group-sm > input[type="month"].text,
   #MemberLoginForm_LoginForm .input-group-sm > input[type="month"].text, #MemberLoginForm_LostPasswordForm .input-group-sm > input[type="month"].text, .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm > .input-group-btn > input[type="month"].action,
@@ -2415,6 +2425,7 @@ input[type="search"] {
     line-height: 30px; }
   input[type="date"].input-lg,
   .input-group-lg > input[type="date"].form-control,
+  .input-group-lg > input[type="date"].text,
   #MemberLoginForm_LoginForm .input-group-lg > input[type="date"].text, #MemberLoginForm_LostPasswordForm .input-group-lg > input[type="date"].text, .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
   .input-group-lg > .input-group-btn > input[type="date"].action,
@@ -2422,6 +2433,7 @@ input[type="search"] {
   .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
+  .input-group-lg > input[type="time"].text,
   #MemberLoginForm_LoginForm .input-group-lg > input[type="time"].text, #MemberLoginForm_LostPasswordForm .input-group-lg > input[type="time"].text, .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg > .input-group-btn > input[type="time"].action,
@@ -2429,6 +2441,7 @@ input[type="search"] {
   .input-group-lg input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg > input[type="datetime-local"].form-control,
+  .input-group-lg > input[type="datetime-local"].text,
   #MemberLoginForm_LoginForm .input-group-lg > input[type="datetime-local"].text, #MemberLoginForm_LostPasswordForm .input-group-lg > input[type="datetime-local"].text, .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].action,
@@ -2436,6 +2449,7 @@ input[type="search"] {
   .input-group-lg input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg > input[type="month"].form-control,
+  .input-group-lg > input[type="month"].text,
   #MemberLoginForm_LoginForm .input-group-lg > input[type="month"].text, #MemberLoginForm_LostPasswordForm .input-group-lg > input[type="month"].text, .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg > .input-group-btn > input[type="month"].action,
@@ -2514,17 +2528,20 @@ fieldset[disabled] .checkbox label {
   min-height: 34px; }
   .form-control-static.input-lg,
   .input-group-lg > .form-control-static.form-control,
+  .input-group-lg > input.form-control-static.text,
   #MemberLoginForm_LoginForm .input-group-lg > input.form-control-static.text, #MemberLoginForm_LostPasswordForm .input-group-lg > input.form-control-static.text, .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn,
   .input-group-lg > .input-group-btn > .form-control-static.action,
   .input-group-lg > .input-group-btn > .form-control-static.deploy-dropdown,
   .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
+  .input-group-sm > input.form-control-static.text,
   #MemberLoginForm_LoginForm .input-group-sm > input.form-control-static.text, #MemberLoginForm_LostPasswordForm .input-group-sm > input.form-control-static.text, .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn, .input-group-sm > .input-group-btn > .form-control-static.action, .input-group-sm > .input-group-btn > .form-control-static.deploy-dropdown {
     padding-left: 0;
     padding-right: 0; }
 
 .input-sm, .input-group-sm > .form-control,
+.input-group-sm > input.text,
 #MemberLoginForm_LoginForm .input-group-sm > input.text, #MemberLoginForm_LostPasswordForm .input-group-sm > input.text, .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn, .input-group-sm > .input-group-btn > .action, .input-group-sm > .input-group-btn > .deploy-dropdown {
   height: 30px;
@@ -2550,7 +2567,7 @@ select[multiple].input-sm, .input-group-sm > select[multiple].form-control,
 .input-group-sm > .input-group-btn > select[multiple].btn, .input-group-sm > .input-group-btn > select[multiple].action, .input-group-sm > .input-group-btn > select[multiple].deploy-dropdown {
   height: auto; }
 
-.form-group-sm .form-control, .form-group-sm #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .form-group-sm input.text, .form-group-sm #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .form-group-sm input.text {
+.form-group-sm .form-control, .form-group-sm input.text, .form-group-sm #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .form-group-sm input.text, .form-group-sm #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .form-group-sm input.text {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -2573,6 +2590,7 @@ select[multiple].input-sm, .input-group-sm > select[multiple].form-control,
   line-height: 1.5; }
 
 .input-lg, .input-group-lg > .form-control,
+.input-group-lg > input.text,
 #MemberLoginForm_LoginForm .input-group-lg > input.text, #MemberLoginForm_LostPasswordForm .input-group-lg > input.text, .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, .input-group-lg > .input-group-btn > .action, .input-group-lg > .input-group-btn > .deploy-dropdown {
   height: 46px;
@@ -2598,7 +2616,7 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 .input-group-lg > .input-group-btn > select[multiple].btn, .input-group-lg > .input-group-btn > select[multiple].action, .input-group-lg > .input-group-btn > select[multiple].deploy-dropdown {
   height: auto; }
 
-.form-group-lg .form-control, .form-group-lg #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .form-group-lg input.text, .form-group-lg #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .form-group-lg input.text {
+.form-group-lg .form-control, .form-group-lg input.text, .form-group-lg #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .form-group-lg input.text, .form-group-lg #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .form-group-lg input.text {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -2622,7 +2640,7 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 
 .has-feedback {
   position: relative; }
-  .has-feedback .form-control, .has-feedback #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .has-feedback input.text, .has-feedback #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .has-feedback input.text {
+  .has-feedback .form-control, .has-feedback input.text, .has-feedback #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .has-feedback input.text, .has-feedback #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .has-feedback input.text {
     padding-right: 42.5px; }
 
 .form-control-feedback {
@@ -2639,24 +2657,26 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 
 .input-lg + .form-control-feedback,
 .input-group-lg > .form-control + .form-control-feedback,
+.input-group-lg > input.text + .form-control-feedback,
 #MemberLoginForm_LoginForm .input-group-lg > input.text + .form-control-feedback, #MemberLoginForm_LostPasswordForm .input-group-lg > input.text + .form-control-feedback, .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg > .input-group-btn > .action + .form-control-feedback,
 .input-group-lg > .input-group-btn > .deploy-dropdown + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
-.form-group-lg .form-control + .form-control-feedback, .form-group-lg #MemberLoginForm_LoginForm input.text + .form-control-feedback, #MemberLoginForm_LoginForm .form-group-lg input.text + .form-control-feedback, .form-group-lg #MemberLoginForm_LostPasswordForm input.text + .form-control-feedback, #MemberLoginForm_LostPasswordForm .form-group-lg input.text + .form-control-feedback {
+.form-group-lg .form-control + .form-control-feedback, .form-group-lg input.text + .form-control-feedback, .form-group-lg #MemberLoginForm_LoginForm input.text + .form-control-feedback, #MemberLoginForm_LoginForm .form-group-lg input.text + .form-control-feedback, .form-group-lg #MemberLoginForm_LostPasswordForm input.text + .form-control-feedback, #MemberLoginForm_LostPasswordForm .form-group-lg input.text + .form-control-feedback {
   width: 46px;
   height: 46px;
   line-height: 46px; }
 
 .input-sm + .form-control-feedback,
 .input-group-sm > .form-control + .form-control-feedback,
+.input-group-sm > input.text + .form-control-feedback,
 #MemberLoginForm_LoginForm .input-group-sm > input.text + .form-control-feedback, #MemberLoginForm_LostPasswordForm .input-group-sm > input.text + .form-control-feedback, .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm > .input-group-btn > .action + .form-control-feedback,
 .input-group-sm > .input-group-btn > .deploy-dropdown + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
-.form-group-sm .form-control + .form-control-feedback, .form-group-sm #MemberLoginForm_LoginForm input.text + .form-control-feedback, #MemberLoginForm_LoginForm .form-group-sm input.text + .form-control-feedback, .form-group-sm #MemberLoginForm_LostPasswordForm input.text + .form-control-feedback, #MemberLoginForm_LostPasswordForm .form-group-sm input.text + .form-control-feedback {
+.form-group-sm .form-control + .form-control-feedback, .form-group-sm input.text + .form-control-feedback, .form-group-sm #MemberLoginForm_LoginForm input.text + .form-control-feedback, #MemberLoginForm_LoginForm .form-group-sm input.text + .form-control-feedback, .form-group-sm #MemberLoginForm_LostPasswordForm input.text + .form-control-feedback, #MemberLoginForm_LostPasswordForm .form-group-sm input.text + .form-control-feedback {
   width: 30px;
   height: 30px;
   line-height: 30px; }
@@ -2673,11 +2693,11 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 .has-success.checkbox-inline label {
   color: #3c763d; }
 
-.has-success .form-control, .has-success #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .has-success input.text, .has-success #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .has-success input.text {
+.has-success .form-control, .has-success input.text, .has-success #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .has-success input.text, .has-success #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .has-success input.text {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .has-success .form-control:focus, .has-success #MemberLoginForm_LoginForm input.text:focus, #MemberLoginForm_LoginForm .has-success input.text:focus, .has-success #MemberLoginForm_LostPasswordForm input.text:focus, #MemberLoginForm_LostPasswordForm .has-success input.text:focus {
+  .has-success .form-control:focus, .has-success input.text:focus, .has-success #MemberLoginForm_LoginForm input.text:focus, #MemberLoginForm_LoginForm .has-success input.text:focus, .has-success #MemberLoginForm_LostPasswordForm input.text:focus, #MemberLoginForm_LostPasswordForm .has-success input.text:focus {
     border-color: #2b542c;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168; }
@@ -2702,11 +2722,11 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 .has-warning.checkbox-inline label {
   color: #8a6d3b; }
 
-.has-warning .form-control, .has-warning #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .has-warning input.text, .has-warning #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .has-warning input.text {
+.has-warning .form-control, .has-warning input.text, .has-warning #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .has-warning input.text, .has-warning #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .has-warning input.text {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .has-warning .form-control:focus, .has-warning #MemberLoginForm_LoginForm input.text:focus, #MemberLoginForm_LoginForm .has-warning input.text:focus, .has-warning #MemberLoginForm_LostPasswordForm input.text:focus, #MemberLoginForm_LostPasswordForm .has-warning input.text:focus {
+  .has-warning .form-control:focus, .has-warning input.text:focus, .has-warning #MemberLoginForm_LoginForm input.text:focus, #MemberLoginForm_LoginForm .has-warning input.text:focus, .has-warning #MemberLoginForm_LostPasswordForm input.text:focus, #MemberLoginForm_LostPasswordForm .has-warning input.text:focus {
     border-color: #66512c;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b; }
@@ -2731,11 +2751,11 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 .has-error.checkbox-inline label {
   color: #a94442; }
 
-.has-error .form-control, .has-error #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .has-error input.text, .has-error #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .has-error input.text {
+.has-error .form-control, .has-error input.text, .has-error #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .has-error input.text, .has-error #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .has-error input.text {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .has-error .form-control:focus, .has-error #MemberLoginForm_LoginForm input.text:focus, #MemberLoginForm_LoginForm .has-error input.text:focus, .has-error #MemberLoginForm_LostPasswordForm input.text:focus, #MemberLoginForm_LostPasswordForm .has-error input.text:focus {
+  .has-error .form-control:focus, .has-error input.text:focus, .has-error #MemberLoginForm_LoginForm input.text:focus, #MemberLoginForm_LoginForm .has-error input.text:focus, .has-error #MemberLoginForm_LostPasswordForm input.text:focus, #MemberLoginForm_LostPasswordForm .has-error input.text:focus {
     border-color: #843534;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483; }
@@ -2765,7 +2785,7 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle; }
-  .form-inline .form-control, .form-inline #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .form-inline input.text, .form-inline #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .form-inline input.text {
+  .form-inline .form-control, .form-inline input.text, .form-inline #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .form-inline input.text, .form-inline #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .form-inline input.text {
     display: inline-block;
     width: auto;
     vertical-align: middle; }
@@ -2776,9 +2796,9 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
     vertical-align: middle; }
     .form-inline .input-group .input-group-addon,
     .form-inline .input-group .input-group-btn,
-    .form-inline .input-group .form-control, .form-inline .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .form-inline .input-group input.text, .form-inline .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .form-inline .input-group input.text {
+    .form-inline .input-group .form-control, .form-inline .input-group input.text, .form-inline .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .form-inline .input-group input.text, .form-inline .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .form-inline .input-group input.text {
       width: auto; }
-  .form-inline .input-group > .form-control, .form-inline #MemberLoginForm_LoginForm .input-group > input.text, #MemberLoginForm_LoginForm .form-inline .input-group > input.text, .form-inline #MemberLoginForm_LostPasswordForm .input-group > input.text, #MemberLoginForm_LostPasswordForm .form-inline .input-group > input.text {
+  .form-inline .input-group > .form-control, .form-inline .input-group > input.text, .form-inline #MemberLoginForm_LoginForm .input-group > input.text, #MemberLoginForm_LoginForm .form-inline .input-group > input.text, .form-inline #MemberLoginForm_LostPasswordForm .input-group > input.text, #MemberLoginForm_LostPasswordForm .form-inline .input-group > input.text {
     width: 100%; }
   .form-inline .control-label {
     margin-bottom: 0;
@@ -3829,7 +3849,7 @@ tbody.collapse.in {
     float: none;
     padding-left: 0;
     padding-right: 0; }
-  .input-group .form-control, .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .input-group input.text, .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .input-group input.text {
+  .input-group .form-control, .input-group input.text, .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .input-group input.text, .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .input-group input.text {
     position: relative;
     z-index: 2;
     float: left;
@@ -3838,11 +3858,11 @@ tbody.collapse.in {
 
 .input-group-addon,
 .input-group-btn,
-.input-group .form-control, .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .input-group input.text, .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .input-group input.text {
+.input-group .form-control, .input-group input.text, .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .input-group input.text, .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .input-group input.text {
   display: table-cell; }
   .input-group-addon:not(:first-child):not(:last-child),
   .input-group-btn:not(:first-child):not(:last-child),
-  .input-group .form-control:not(:first-child):not(:last-child), .input-group #MemberLoginForm_LoginForm input.text:not(:first-child):not(:last-child), #MemberLoginForm_LoginForm .input-group input.text:not(:first-child):not(:last-child), .input-group #MemberLoginForm_LostPasswordForm input.text:not(:first-child):not(:last-child), #MemberLoginForm_LostPasswordForm .input-group input.text:not(:first-child):not(:last-child) {
+  .input-group .form-control:not(:first-child):not(:last-child), .input-group input.text:not(:first-child):not(:last-child), .input-group #MemberLoginForm_LoginForm input.text:not(:first-child):not(:last-child), #MemberLoginForm_LoginForm .input-group input.text:not(:first-child):not(:last-child), .input-group #MemberLoginForm_LostPasswordForm input.text:not(:first-child):not(:last-child), #MemberLoginForm_LostPasswordForm .input-group input.text:not(:first-child):not(:last-child) {
     border-radius: 0; }
 
 .input-group-addon,
@@ -3876,6 +3896,7 @@ tbody.collapse.in {
     margin-top: 0; }
 
 .input-group .form-control:first-child,
+.input-group input.text:first-child,
 .input-group #MemberLoginForm_LoginForm input.text:first-child,
 #MemberLoginForm_LoginForm .input-group input.text:first-child, .input-group #MemberLoginForm_LostPasswordForm input.text:first-child,
 #MemberLoginForm_LostPasswordForm .input-group input.text:first-child, .input-group-addon:first-child,
@@ -3897,6 +3918,7 @@ tbody.collapse.in {
   border-right: 0; }
 
 .input-group .form-control:last-child,
+.input-group input.text:last-child,
 .input-group #MemberLoginForm_LoginForm input.text:last-child,
 #MemberLoginForm_LoginForm .input-group input.text:last-child, .input-group #MemberLoginForm_LostPasswordForm input.text:last-child,
 #MemberLoginForm_LostPasswordForm .input-group input.text:last-child, .input-group-addon:last-child,
@@ -4276,7 +4298,7 @@ tbody.collapse.in {
       display: inline-block;
       margin-bottom: 0;
       vertical-align: middle; }
-    .navbar-form .form-control, .navbar-form #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .navbar-form input.text, .navbar-form #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .navbar-form input.text {
+    .navbar-form .form-control, .navbar-form input.text, .navbar-form #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .navbar-form input.text, .navbar-form #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .navbar-form input.text {
       display: inline-block;
       width: auto;
       vertical-align: middle; }
@@ -4287,9 +4309,9 @@ tbody.collapse.in {
       vertical-align: middle; }
       .navbar-form .input-group .input-group-addon,
       .navbar-form .input-group .input-group-btn,
-      .navbar-form .input-group .form-control, .navbar-form .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .navbar-form .input-group input.text, .navbar-form .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .navbar-form .input-group input.text {
+      .navbar-form .input-group .form-control, .navbar-form .input-group input.text, .navbar-form .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .navbar-form .input-group input.text, .navbar-form .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .navbar-form .input-group input.text {
         width: auto; }
-    .navbar-form .input-group > .form-control, .navbar-form #MemberLoginForm_LoginForm .input-group > input.text, #MemberLoginForm_LoginForm .navbar-form .input-group > input.text, .navbar-form #MemberLoginForm_LostPasswordForm .input-group > input.text, #MemberLoginForm_LostPasswordForm .navbar-form .input-group > input.text {
+    .navbar-form .input-group > .form-control, .navbar-form .input-group > input.text, .navbar-form #MemberLoginForm_LoginForm .input-group > input.text, #MemberLoginForm_LoginForm .navbar-form .input-group > input.text, .navbar-form #MemberLoginForm_LostPasswordForm .input-group > input.text, #MemberLoginForm_LostPasswordForm .navbar-form .input-group > input.text {
       width: 100%; }
     .navbar-form .control-label {
       margin-bottom: 0;
@@ -4843,13 +4865,16 @@ a.thumbnail.active {
     right: -21px;
     color: inherit; }
 
-.alert-success, .alert.Complete {
+.alert-success, .alert.alert-good,
+.alert.Complete {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #3c763d; }
-  .alert-success hr, .alert.Complete hr {
+  .alert-success hr, .alert.alert-good hr,
+  .alert.Complete hr {
     border-top-color: #c9e2b3; }
-  .alert-success .alert-link, .alert.Complete .alert-link {
+  .alert-success .alert-link, .alert.alert-good .alert-link,
+  .alert.Complete .alert-link {
     color: #2b542c; }
 
 .alert-info, .alert.Started,
@@ -4876,13 +4901,16 @@ a.thumbnail.active {
   .alert-warning .alert-link, .alert.Invalid .alert-link {
     color: #66512c; }
 
-.alert-danger, .alert.Failed {
+.alert-danger, .alert.alert-error,
+.alert.Failed {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442; }
-  .alert-danger hr, .alert.Failed hr {
+  .alert-danger hr, .alert.alert-error hr,
+  .alert.Failed hr {
     border-top-color: #e4b9c0; }
-  .alert-danger .alert-link, .alert.Failed .alert-link {
+  .alert-danger .alert-link, .alert.alert-error .alert-link,
+  .alert.Failed .alert-link {
     color: #843534; }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -8857,7 +8885,7 @@ button.close {
 .input-group {
   position: relative; }
 
-.form-control, #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LostPasswordForm input.text {
+.form-control, input.text, #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LostPasswordForm input.text {
   display: block;
   height: 36px;
   width: 100%;
@@ -8870,14 +8898,14 @@ button.close {
   box-shadow: none;
   border-bottom: 1px solid #e6e6e6; }
 
-.input-group .form-control, .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .input-group input.text, .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .input-group input.text {
+.input-group .form-control, .input-group input.text, .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .input-group input.text, .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .input-group input.text {
   position: relative;
   z-index: inherit;
   float: inherit;
   width: 100%;
   margin-bottom: 0; }
 
-.form-control:focus, #MemberLoginForm_LoginForm input.text:focus, #MemberLoginForm_LostPasswordForm input.text:focus {
+.form-control:focus, input.text:focus, #MemberLoginForm_LoginForm input.text:focus, #MemberLoginForm_LostPasswordForm input.text:focus {
   border-color: #646464;
   outline: none;
   box-shadow: none; }
@@ -8910,15 +8938,15 @@ label {
   pointer-events: none; }
 
 /* active state */
-.form-control:focus ~ .float-label, #MemberLoginForm_LoginForm input.text:focus ~ .float-label, #MemberLoginForm_LostPasswordForm input.text:focus ~ .float-label, .form-control:valid ~ .float-label, #MemberLoginForm_LoginForm input.text:valid ~ .float-label, #MemberLoginForm_LostPasswordForm input.text:valid ~ .float-label {
+.form-control:focus ~ .float-label, input.text:focus ~ .float-label, #MemberLoginForm_LoginForm input.text:focus ~ .float-label, #MemberLoginForm_LostPasswordForm input.text:focus ~ .float-label, .form-control:valid ~ .float-label, input.text:valid ~ .float-label, #MemberLoginForm_LoginForm input.text:valid ~ .float-label, #MemberLoginForm_LostPasswordForm input.text:valid ~ .float-label {
   top: -18px;
   font-size: 12px; }
 
 /* input colors ---- */
-.form-control:focus ~ label, #MemberLoginForm_LoginForm input.text:focus ~ label, #MemberLoginForm_LostPasswordForm input.text:focus ~ label {
+.form-control:focus ~ label, input.text:focus ~ label, #MemberLoginForm_LoginForm input.text:focus ~ label, #MemberLoginForm_LostPasswordForm input.text:focus ~ label {
   color: #03a9f4; }
 
-.form-control:focus ~ .form-bar:before, #MemberLoginForm_LoginForm input.text:focus ~ .form-bar:before, #MemberLoginForm_LostPasswordForm input.text:focus ~ .form-bar:before, .form-control:focus ~ .form-bar:after, #MemberLoginForm_LoginForm input.text:focus ~ .form-bar:after, #MemberLoginForm_LostPasswordForm input.text:focus ~ .form-bar:after {
+.form-control:focus ~ .form-bar:before, input.text:focus ~ .form-bar:before, #MemberLoginForm_LoginForm input.text:focus ~ .form-bar:before, #MemberLoginForm_LostPasswordForm input.text:focus ~ .form-bar:before, .form-control:focus ~ .form-bar:after, input.text:focus ~ .form-bar:after, #MemberLoginForm_LoginForm input.text:focus ~ .form-bar:after, #MemberLoginForm_LostPasswordForm input.text:focus ~ .form-bar:after {
   background: #03a9f4; }
 
 /* help-block */
@@ -8948,7 +8976,7 @@ label {
 @media (min-width: 768px) {
   .form-inline .form-group, .form-inline .field.text {
     margin-top: 16px; }
-  .input-group-btn, .input-group .form-control, .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .input-group input.text, .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .input-group input.text, .input-group-addon, .form-inline .input-group {
+  .input-group-btn, .input-group .form-control, .input-group input.text, .input-group #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm .input-group input.text, .input-group #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm .input-group input.text, .input-group-addon, .form-inline .input-group {
     display: inline-block; }
   .input-group {
     width: auto; } }
@@ -8976,7 +9004,7 @@ label {
   right: 50%; }
 
 /* active state */
-.form-control:focus ~ .form-bar:before, #MemberLoginForm_LoginForm input.text:focus ~ .form-bar:before, #MemberLoginForm_LostPasswordForm input.text:focus ~ .form-bar:before, .form-control:focus ~ .form-bar:after, #MemberLoginForm_LoginForm input.text:focus ~ .form-bar:after, #MemberLoginForm_LostPasswordForm input.text:focus ~ .form-bar:after {
+.form-control:focus ~ .form-bar:before, input.text:focus ~ .form-bar:before, #MemberLoginForm_LoginForm input.text:focus ~ .form-bar:before, #MemberLoginForm_LostPasswordForm input.text:focus ~ .form-bar:before, .form-control:focus ~ .form-bar:after, input.text:focus ~ .form-bar:after, #MemberLoginForm_LoginForm input.text:focus ~ .form-bar:after, #MemberLoginForm_LostPasswordForm input.text:focus ~ .form-bar:after {
   width: 50%; }
 
 /* -- highlighter styles ------------------------------ */
@@ -8990,7 +9018,7 @@ label {
   opacity: 0.4; }
 
 /* active state */
-.form-control:focus ~ .form-highlight, #MemberLoginForm_LoginForm input.text:focus ~ .form-highlight, #MemberLoginForm_LostPasswordForm input.text:focus ~ .form-highlight {
+.form-control:focus ~ .form-highlight, input.text:focus ~ .form-highlight, #MemberLoginForm_LoginForm input.text:focus ~ .form-highlight, #MemberLoginForm_LostPasswordForm input.text:focus ~ .form-highlight {
   -webkit-animation: inputHighlighter 0.3s ease;
   -moz-animation: inputHighlighter 0.3s ease;
   animation: inputHighlighter 0.3s ease; }
@@ -9024,7 +9052,7 @@ label {
 .form-control-static {
   font-size: 16px; }
 
-.form-control[disabled], #MemberLoginForm_LoginForm input[disabled].text, #MemberLoginForm_LostPasswordForm input[disabled].text, .form-control[readonly], #MemberLoginForm_LoginForm input[readonly].text, #MemberLoginForm_LostPasswordForm input[readonly].text, fieldset[disabled] .form-control, fieldset[disabled] #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm fieldset[disabled] input.text, fieldset[disabled] #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm fieldset[disabled] input.text {
+.form-control[disabled], input[disabled].text, #MemberLoginForm_LoginForm input[disabled].text, #MemberLoginForm_LostPasswordForm input[disabled].text, .form-control[readonly], input[readonly].text, #MemberLoginForm_LoginForm input[readonly].text, #MemberLoginForm_LostPasswordForm input[readonly].text, fieldset[disabled] .form-control, fieldset[disabled] input.text, fieldset[disabled] #MemberLoginForm_LoginForm input.text, #MemberLoginForm_LoginForm fieldset[disabled] input.text, fieldset[disabled] #MemberLoginForm_LostPasswordForm input.text, #MemberLoginForm_LostPasswordForm fieldset[disabled] input.text {
   background-color: transparent;
   border-bottom-style: dashed; }
 
@@ -9226,7 +9254,8 @@ h1 {
   border-radius: 0px;
   text-align: left;
   font-size: 26px;
-  line-height: 40px; }
+  line-height: 40px;
+  margin-bottom: 0; }
   .deploy-dropdown .status-icon {
     line-height: 40px; }
   .deploy-dropdown .loading-text {
@@ -9241,6 +9270,10 @@ h1 {
   border-width: 0px 1px 1px;
   border-style: solid;
   border-color: #bbb; }
+  .deploy-form-outer .deploy-form label {
+    position: static;
+    font-size: 16px;
+    color: #555555; }
   .deploy-form-outer .deploy-form .SelectionGroup > li {
     background-color: #ddd;
     border-width: 1px 1px 1px 0px;
@@ -9271,14 +9304,24 @@ h1 {
     .deploy-form-outer .deploy-form .SelectionGroup + .tab-content .CompositeField {
       width: 100%;
       margin-bottom: 0.75em; }
+      .deploy-form-outer .deploy-form .SelectionGroup + .tab-content select > *,
+      .deploy-form-outer .deploy-form .SelectionGroup + .tab-content .select2 > *,
+      .deploy-form-outer .deploy-form .SelectionGroup + .tab-content input > *,
+      .deploy-form-outer .deploy-form .SelectionGroup + .tab-content .CompositeField > * {
+        width: 100%; }
   .deploy-form-outer .deploy-form *[name="action_doDeploy"] {
     border-radius: 0;
     font-size: 26px;
     line-height: 40px;
     margin: 20px 0; }
 
-.environment-details > span {
-  display: block; }
+.deploy-history {
+  margin-top: 3em; }
+
+.environment-details {
+  margin-bottom: 3em; }
+  .environment-details > * > span {
+    display: block; }
 
 .project-links li {
   line-height: 24px; }
