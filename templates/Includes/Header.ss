@@ -30,11 +30,7 @@
 			<% end_loop %>
 		<% end_if %>
 
-		<li class="nav-main-heading">Support</li>
-		
-		<li><a href=""><span class="plat-icon icon-helpdesk"></span>Help desk</a></li>
-		<li><a href=""><span class="plat-icon icon-documentation"></span>Documentation</a></li>
-		<li><a href="http://www.silverstripe.com/platform"><span class="plat-icon icon-overview"></span>Platform overview</a></li>
+		<% include SidebarLinks %>
 
 	</ul>
 </div>
