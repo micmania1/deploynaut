@@ -68,7 +68,7 @@
 							<a href="$Link/metrics">Metrics</a>
 						<% end_if %>
 						<% if $LogsLink %>
-							<a href="$LogsLink">Logs</a>
+							<a href="$LogsLink" target="_blank">Logs</a>
 						<% end_if %>
 						<% if not $HasMetrics && not $LogsLink %>
 							<em>-</em>
