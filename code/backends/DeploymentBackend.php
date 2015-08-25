@@ -3,15 +3,27 @@
 interface DeploymentBackend {
 
 	/**
-	 * Deploy the given build to the given environment
+	 * @param DeployForm $form
+	 * @param DNEnvironment $environment
+	 * @param string $sha
+	 * @param DNProject $project
+	 *
+	 * @return DeploymentStrategy
+	 */
+	public function planDeploy(DeployForm $form, DNEnvironment $environment, $sha, DNProject $project);
+
+	/**
+	 * Deploy the given build to the given environment.
 	 *
 	 * @param DNEnvironment $environment
 	 * @param string $sha
 	 * @param DeploynautLogFile $log
 	 * @param DNProject $project
-	 * @param type $leaveMaintenancePage
+	 * @param bool $leaveMaintenancePage
+	 * @param array $options
 	 */
-	public function deploy(DNEnvironment $environment, $sha, DeploynautLogFile $log, DNProject $project, $leaveMaintenancePage = false);
+	public function deploy(DNEnvironment $environment, $sha, DeploynautLogFile $log, DNProject $project,
+		$leaveMaintenancePage = false, $options = array());
 
 	/**
 	 * Transfer data from an environment to a local file, or from a local file
@@ -48,5 +60,4 @@ interface DeploymentBackend {
 	 * @param DNProject $project
 	 */
 	public function ping(DNEnvironment $environment, DeploynautLogFile $log, DNProject $project);
-
 }
