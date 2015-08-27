@@ -175,7 +175,7 @@ class DNDeployment extends DataObject {
 			'leaveMaintenacePage' => $this->LeaveMaintenacePage
 		);
 
-		$options = json_decode($this->Options);
+		$options = json_decode($this->Options, true);
 		array_merge($args, $options);
 
 		if(!$this->DeployerID) {

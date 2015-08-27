@@ -1,11 +1,12 @@
 <?php
 
-class DeploymentStrategy {
+class DeploymentStrategy extends ViewableData {
 
-	/**
-	 * @var DeployForm
-	 */
-	protected $form;
+	const SUCCESS_CODE = 'success';
+
+	const WARNING_CODE = 'warning';
+
+	const ERROR_CODE = 'error';
 
 	/**
 	 * @var DNEnvironment
@@ -18,24 +19,19 @@ class DeploymentStrategy {
 	protected $sha;
 
 	/**
-	 * @var DNProject
+	 * @var string
 	 */
-	protected $project;
+	protected $actionTitle = 'Deploy';
 
 	/**
 	 * @var string
 	 */
-	protected $actionTitle;
+	protected $actionCode = 'deploy';
 
 	/**
-	 * @var string
+	 * @var int 
 	 */
-	protected $actionCode;
-
-	/**
-	 * @var string
-	 */
-	protected $estimatedTime;
+	protected $estimatedTime = 0;
 
 	/**
 	 * @var string
@@ -48,16 +44,27 @@ class DeploymentStrategy {
 	protected $options;
 
 	/**
+	 * Validation code
+	 *
 	 * @var string
 	 */
-	protected $validator;
+	protected $validationCode = DeploymentStrategy::SUCCESS_CODE;
 
-	function __construct(DeployForm $form, DNEnvironment $environment, $sha, DNProject $project) {
-		$this->form = $form;
+	/**
+	 * @var array
+	 */
+	protected $errors = array();
+
+
+	/**
+	 * @param DNEnvironment $environment
+	 * @param string $sha
+	 * @param array $options
+	 */
+	public function __construct(DNEnvironment $environment, $sha, $options = array()) {
 		$this->environment = $environment;
 		$this->sha = $sha;
-		$this->project = $project;
-		$this->validator = new ValidationResult();
+		$this->options = $options;
 	}
 
 	/**
@@ -131,42 +138,44 @@ class DeploymentStrategy {
 	 * @param string $option
 	 * @param string $value
 	 */
-	function setOption($option, $value) {
+	public function setOption($option, $value) {
 		$this->options[$option] = $value;
 	}
 
 	/**
 	 * @return array
 	 */
-	function getOptions() {
+	public function getOptions() {
 		return $this->options;
 	}
 
 	/**
-	 * @return bool
+	 * @param string $code
 	 */
-	public function hasErrors() {
-		return !$this->validator->valid();
+	public function setValidationCode($code) {
+		$this->validationCode = $code;
 	}
 
 	/**
-	 * @return ValidationResult
+	 * @return string
 	 */
-	public function getValidationResult() {
-		return $this->validator;
+	public function getValidationCode() {
+		return $this->validatonCode;
 	}
 
 	/**
-	 * @return DNDeployment
+	 * @param string $msg
 	 */
-	public function createDeployment() {
-		$deployment = DNDeployment::create();
-		$deployment->EnvironmentID = $this->environment->ID;
-		$deployment->SHA = $this->sha;
-		$deployment->Options = json_encode($options);
-		$deployment->write();
+	public function setError($msg) {
+		$this->errors[] = $msg;
+		$this->setValidationCode(DeploymentStrategy::ERROR_CODE);
+	}
 
-		return $deployment;
+	/**
+	 * @return array
+	 */
+	public function getErrors() {
+		return $this->errors;
 	}
 }
 

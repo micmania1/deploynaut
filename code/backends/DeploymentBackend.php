@@ -3,14 +3,15 @@
 interface DeploymentBackend {
 
 	/**
-	 * @param DeployForm $form
+	 * Creates a deployment strategy that can be used to do some pre-flight checks.
+	 *
 	 * @param DNEnvironment $environment
 	 * @param string $sha
-	 * @param DNProject $project
+	 * @param array $options
 	 *
 	 * @return DeploymentStrategy
 	 */
-	public function planDeploy(DeployForm $form, DNEnvironment $environment, $sha, DNProject $project);
+	public function planDeploy(DNEnvironment $environment, $sha, $options = array());
 
 	/**
 	 * Deploy the given build to the given environment.
