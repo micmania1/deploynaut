@@ -2124,6 +2124,14 @@ class DNRoot extends Controller implements PermissionProvider, TemplateGlobalPro
 		}
 	}
 
+	public function CreateEnvironmentList() {
+		$project = $this->getCurrentProject();
+		if($project) {
+			return new PaginatedList($project->CreateEnvironments()->sort("Created DESC"), $this->request);
+		}
+		return new PaginatedList(new ArrayList(), $this->request);
+	}
+
 	/**
 	 * Returns a list of all archive files that can be accessed by the currently logged-in {@link Member}
 	 *
