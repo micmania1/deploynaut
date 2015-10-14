@@ -969,5 +969,44 @@ class DNProject extends DataObject {
 		return ($hits>0 ? true : false);
 	}
 
+	/**
+	 * Checks to see if a user has permission to create a project.
+	 *
+	 * @param $member Member|null
+	 *
+	 * @return bool
+	 */
+	public function canCreate($member = null) {
+		if(!$member) $member = Member::currentUser();
+		if(!$member) return false;
+
+		return Permission::checkMember($member, 'ADMIN');
+	}
+
+	/**
+	 * @return ValidationResult
+	 */
+	protected function validate() {
+		$validation = parent::validate();
+		if($validation->valid()) {
+			if(empty($this->Name)) {
+				return $validation->error('The project must have a name.');
+			}
+
+			if(empty($this->CVSPath)) {
+				return $validation->error('You must provide a repository URL.');
+			}
+
+			$existing = DNProject::get()->filter('Name', $this->Name);
+			if($this->ID) {
+				$existing = $existing->exclude('ID', $this->ID);
+			}
+			if($existing->count() > 0) {
+				return $validation->error('A project already exists with that name.');
+			}
+		}
+		return $validation;
+	}
+
 }
 
