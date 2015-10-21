@@ -875,7 +875,7 @@ class DNRoot extends Controller implements PermissionProvider, TemplateGlobalPro
 				'CreateEnvironment' => $record,
 			));
 		}
-		return $this->render();
+		return $this->render(array('CurrentTitle' => 'Create an environment'));
 	}
 
 
